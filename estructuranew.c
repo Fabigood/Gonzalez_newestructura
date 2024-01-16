@@ -42,13 +42,35 @@ void mostrarDatos(struct alumno *alumno) {
     printf("\nMatricula: %d\n", alumno->matricula);
     printf("Nombre: ");
     puts(alumno->nombre);
-    printf("Direccion: "); //se crea esta funcion para llmarla
+    printf("Direccion: "); 
     puts(alumno->direccion);
     printf("Carrera: ");
     puts(alumno->carrera);
     printf("Promedio: %.2f\n", alumno->promedio);
 }
 
+int main() {
+    int n;
 
-    return 0;
+    printf("Ingrese el numero de alumnos: ");
+    scanf("%d", &n);
+
+    struct alumno *alumnos = (struct alumno *)malloc(n * sizeof(struct alumno));
+
+    if (alumnos == NULL) {
+        printf("Error de asignacion de memoria.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("\nIngreso de datos para el alumno %d:\n", i + 1);
+        ingresarDatos(&alumnos[i]);
+    }
+
+    printf("\nMenu:\n");
+    printf("1. Mostrar datos\n");
+    printf("0. Salir\n");
+    printf("Seleccione una opcion: ");
+
+    
 }
