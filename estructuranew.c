@@ -38,5 +38,17 @@ void ingresarDatos(struct alumno *alumno) {
     scanf("%f", &alumno->promedio);
 }
 
+void mostrarDatos(struct alumno *alumno) {
+    printf("\nMatricula: %d\n", alumno->matricula);
+    printf("Nombre: ");
+    puts(alumno->nombre);
+    printf("Direccion: "); //se crea esta funcion para llmarla
+    puts(alumno->direccion);
+    printf("Carrera: ");
+    puts(alumno->carrera);
+    printf("Promedio: %.2f\n", alumno->promedio);
+}
+
+
     return 0;
 }
