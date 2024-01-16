@@ -40,3 +40,13 @@ void mostrarDatos(struct alumno *alumno) {
     printf("Promedio: %.2f\n", alumno->promedio);
 }
 
+int main() {
+    int n;
+
+    printf("Ingrese el numero de alumnos: ");
+    scanf("%d", &n);
+
+    struct alumno *alumnos = (struct alumno *)malloc(n * sizeof(struct alumno));
+
+    
+}
