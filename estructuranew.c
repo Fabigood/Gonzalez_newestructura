@@ -59,6 +59,25 @@ int main() {
     }
 
    
-    
+    printf("\nMenu:\n");
+    printf("1. Mostrar datos\n");
+    printf("0. Salir\n");
+    printf("Seleccione una opcion: ");
+
+    int opcion;
+    scanf("%d", &opcion);
+
+    if (opcion == 1) {
+   
+        printf("\nDatos ingresados para los alumnos:\n");
+        for (int i = 0; i < n; i++) {
+            printf("\nDatos del alumno %d:\n", i + 1);
+            mostrarDatos(&alumnos[i]);
+        }
+    } else {
+        printf("Saliendo del programa.\n");
+    }
+
+    free(alumnos); 
     return 0;
 }
