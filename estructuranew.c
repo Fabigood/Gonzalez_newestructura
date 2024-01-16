@@ -48,5 +48,17 @@ int main() {
 
     struct alumno *alumnos = (struct alumno *)malloc(n * sizeof(struct alumno));
 
+    if (alumnos == NULL) {
+        printf("Error de asignacion de memoria.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("\nIngreso de datos para el alumno %d:\n", i + 1);
+        ingresarDatos(&alumnos[i]);
+    }
+
+   
     
+    return 0;
 }
